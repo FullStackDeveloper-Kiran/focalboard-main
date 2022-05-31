@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/dialog should match snapshot 1`] = `
+<div>
+  <div
+    class="Dialog dialog-back undefined"
+  >
+    <div
+      class="backdrop"
+    />
+    <div
+      class="wrapper"
+    >
+      <div
+        class="dialog"
+        role="dialog"
+      >
+        <div
+          class="toolbar"
+        >
+          <button
+            aria-label="Close dialog"
+            class="IconButton size--medium"
+            title="Close dialog"
+            type="button"
+          >
+            <i
+              class="CompassIcon icon-close CloseIcon"
+            />
+          </button>
+          <div
+            class="toolbar--right"
+          />
+        </div>
+        <div
+          id="test"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/dialog should return dialog and click on cancel button 1`] = `
+<div>
+  <div
+    class="Dialog dialog-back undefined"
+  >
+    <div
+      class="backdrop"
+    />
+    <div
+      class="wrapper"
+    >
+      <div
+        class="dialog"
+        role="dialog"
+      >
+        <div
+          class="toolbar"
+        >
+          <button
+            aria-label="Close dialog"
+            class="IconButton size--medium"
+            title="Close dialog"
+            type="button"
+          >
+            <i
+              class="CompassIcon icon-close CloseIcon"
+            />
+          </button>
+          <div
+            class="toolbar--right"
+          >
+            <div
+              aria-label="menuwrapper"
+              class="MenuWrapper"
+              role="button"
+            >
+              <button
+                class="IconButton size--medium"
+                type="button"
+              >
+                <i
+                  class="CompassIcon icon-dots-horizontal OptionsIcon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="test"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

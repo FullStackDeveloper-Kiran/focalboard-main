@@ -1,0 +1,410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/viewTitle add random icon 1`] = `
+<div>
+  <div
+    class="ViewTitle"
+  >
+    <div
+      class="add-buttons add-visible"
+    >
+      <button
+        type="button"
+      >
+        <i
+          class="CompassIcon icon-emoticon-outline undefined"
+        />
+        <span>
+          Add icon
+        </span>
+      </button>
+      <button
+        type="button"
+      >
+        <i
+          class="CompassIcon icon-eye-outline undefined"
+        />
+        <span>
+          show description
+        </span>
+      </button>
+    </div>
+    <div
+      class="title"
+    >
+      <input
+        class="Editable title"
+        placeholder="Untitled board"
+        spellcheck="true"
+        title="board title"
+        value="board title"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/viewTitle hide description 1`] = `
+<div>
+  <div
+    class="ViewTitle"
+  >
+    <div
+      class="add-buttons add-visible"
+    >
+      <button
+        type="button"
+      >
+        <i
+          class="CompassIcon icon-eye-outline undefined"
+        />
+        <span>
+          show description
+        </span>
+      </button>
+    </div>
+    <div
+      class="title"
+    >
+      <div
+        class="IconSelector"
+      >
+        <div
+          aria-label="menuwrapper"
+          class="MenuWrapper"
+          role="button"
+        >
+          <div
+            class="octo-icon size-m"
+          >
+            <span>
+              i
+            </span>
+          </div>
+        </div>
+      </div>
+      <input
+        class="Editable title"
+        placeholder="Untitled board"
+        spellcheck="true"
+        title="board title"
+        value="board title"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/viewTitle should match snapshot 1`] = `
+<div>
+  <div
+    class="ViewTitle"
+  >
+    <div
+      class="add-buttons add-visible"
+    >
+      <button
+        type="button"
+      >
+        <i
+          class="CompassIcon icon-eye-off-outline undefined"
+        />
+        <span>
+          hide description
+        </span>
+      </button>
+    </div>
+    <div
+      class="title"
+    >
+      <div
+        class="IconSelector"
+      >
+        <div
+          aria-label="menuwrapper"
+          class="MenuWrapper"
+          role="button"
+        >
+          <div
+            class="octo-icon size-m"
+          >
+            <span>
+              i
+            </span>
+          </div>
+        </div>
+      </div>
+      <input
+        class="Editable title"
+        placeholder="Untitled board"
+        spellcheck="true"
+        title="board title"
+        value="board title"
+      />
+    </div>
+    <div
+      class="description"
+    >
+      <div
+        class="MarkdownEditor octo-editor  "
+      >
+        <div
+          class="octo-editor-preview"
+          data-testid="preview-element"
+        />
+        <div
+          class="MarkdownEditorInput MarkdownEditorInput--IsNotEditing"
+        >
+          <div
+            class="DraftEditor-root"
+          >
+            <div
+              class="DraftEditor-editorContainer"
+            >
+              <div
+                aria-autocomplete="list"
+                aria-expanded="false"
+                class="notranslate public-DraftEditor-content"
+                contenteditable="true"
+                role="combobox"
+                spellcheck="false"
+                style="outline: none; user-select: text; white-space: pre-wrap; word-wrap: break-word;"
+              >
+                <div
+                  data-contents="true"
+                >
+                  <div
+                    class=""
+                    data-block="true"
+                    data-editor="123"
+                    data-offset-key="123-0-0"
+                  >
+                    <div
+                      class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"
+                      data-offset-key="123-0-0"
+                    >
+                      <span
+                        data-offset-key="123-0-0"
+                      >
+                        <span
+                          data-text="true"
+                        >
+                          description
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/viewTitle should match snapshot readonly 1`] = `
+<div>
+  <div
+    class="ViewTitle"
+  >
+    <div
+      class="add-buttons add-visible"
+    />
+    <div
+      class="title"
+    >
+      <div
+        class="IconSelector"
+      >
+        <div
+          class="octo-icon size-m readonly"
+        >
+          <span>
+            i
+          </span>
+        </div>
+      </div>
+      <input
+        class="Editable readonly title"
+        placeholder="Untitled board"
+        readonly=""
+        spellcheck="true"
+        title="board title"
+        value="board title"
+      />
+    </div>
+    <div
+      class="description"
+    >
+      <div
+        class="MarkdownEditor octo-editor  "
+      >
+        <div
+          class="octo-editor-preview"
+          data-testid="preview-element"
+        />
+        <div
+          class="MarkdownEditorInput MarkdownEditorInput--IsNotEditing"
+        >
+          <div
+            class="DraftEditor-root"
+          >
+            <div
+              class="DraftEditor-editorContainer"
+            >
+              <div
+                aria-autocomplete="list"
+                aria-expanded="false"
+                class="notranslate public-DraftEditor-content"
+                contenteditable="true"
+                role="combobox"
+                spellcheck="false"
+                style="outline: none; user-select: text; white-space: pre-wrap; word-wrap: break-word;"
+              >
+                <div
+                  data-contents="true"
+                >
+                  <div
+                    class=""
+                    data-block="true"
+                    data-editor="123"
+                    data-offset-key="123-0-0"
+                  >
+                    <div
+                      class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"
+                      data-offset-key="123-0-0"
+                    >
+                      <span
+                        data-offset-key="123-0-0"
+                      >
+                        <span
+                          data-text="true"
+                        >
+                          description
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/viewTitle show description 1`] = `
+<div>
+  <div
+    class="ViewTitle"
+  >
+    <div
+      class="add-buttons add-visible"
+    >
+      <button
+        type="button"
+      >
+        <i
+          class="CompassIcon icon-eye-off-outline undefined"
+        />
+        <span>
+          hide description
+        </span>
+      </button>
+    </div>
+    <div
+      class="title"
+    >
+      <div
+        class="IconSelector"
+      >
+        <div
+          aria-label="menuwrapper"
+          class="MenuWrapper"
+          role="button"
+        >
+          <div
+            class="octo-icon size-m"
+          >
+            <span>
+              i
+            </span>
+          </div>
+        </div>
+      </div>
+      <input
+        class="Editable title"
+        placeholder="Untitled board"
+        spellcheck="true"
+        title="board title"
+        value="board title"
+      />
+    </div>
+    <div
+      class="description"
+    >
+      <div
+        class="MarkdownEditor octo-editor  "
+      >
+        <div
+          class="octo-editor-preview"
+          data-testid="preview-element"
+        />
+        <div
+          class="MarkdownEditorInput MarkdownEditorInput--IsNotEditing"
+        >
+          <div
+            class="DraftEditor-root"
+          >
+            <div
+              class="DraftEditor-editorContainer"
+            >
+              <div
+                aria-autocomplete="list"
+                aria-expanded="false"
+                class="notranslate public-DraftEditor-content"
+                contenteditable="true"
+                role="combobox"
+                spellcheck="false"
+                style="outline: none; user-select: text; white-space: pre-wrap; word-wrap: break-word;"
+              >
+                <div
+                  data-contents="true"
+                >
+                  <div
+                    class=""
+                    data-block="true"
+                    data-editor="123"
+                    data-offset-key="123-0-0"
+                  >
+                    <div
+                      class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"
+                      data-offset-key="123-0-0"
+                    >
+                      <span
+                        data-offset-key="123-0-0"
+                      >
+                        <span
+                          data-text="true"
+                        >
+                          description
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

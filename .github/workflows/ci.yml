@@ -1,0 +1,114 @@
+name: Check-in tests
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'releases-**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+
+  ci-ubuntu-server:
+    runs-on: ubuntu-18.04
+
+    strategy:
+      matrix:
+        db:
+          - sqlite
+          - mysql
+          - postgres
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.18.1
+
+    - name: "Test server: ${{matrix['db']}}"
+      run: make server-test-${{matrix['db']}}
+
+  ci-ubuntu-webapp:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: npm ci
+      run: cd webapp; npm ci
+
+    - name: ESLint
+      run: cd webapp; npm run check
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.18.1
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.1.0
+
+    - name: Build Linux server
+      run: make server-linux-package
+
+    - name: Copy server binary for Cypress
+      run: cp bin/linux/focalboard-server bin/
+
+    - name: Upload server package
+      uses: actions/upload-artifact@v1
+      with:
+        name: focalboard-server-linux-amd64.tar.gz
+        path: ${{ github.workspace }}/dist/focalboard-server-linux-amd64.tar.gz
+
+    - name: "Test webapp: Jest"
+      run: cd webapp; npm run test
+
+    - name: "Test webapp: Cypress"
+      run: "cd webapp; npm run cypress:ci"
+
+  ci-windows-server:
+    runs-on: windows-2022
+
+    strategy:
+      matrix:
+        db:
+          - sqlite
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.18.1
+
+    - name: "Test server (minimum): ${{matrix['db']}}"
+      run: make server-test-mini-${{matrix['db']}}
+
+  ci-mac-server:
+    runs-on: macos-11
+
+    strategy:
+      matrix:
+        db:
+          - sqlite
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.18.1
+
+    - name: "Test server (minimum): ${{matrix['db']}}"
+      run: make server-test-mini-${{matrix['db']}}
